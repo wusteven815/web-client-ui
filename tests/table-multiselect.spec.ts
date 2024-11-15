@@ -80,6 +80,7 @@ function runSpecialSelectFilter(
     const gridLocation = await getGridLocation(page);
     if (gridLocation === null) return;
 
+    await page.waitForTimeout(750);
     await page.mouse.click(
       gridLocation.x + 1,
       gridLocation.y + 1 + columnHeight,
@@ -109,10 +110,12 @@ function runMultiSelectFilter(
 
     // activate the quick filter to get that text as well
     await test.step('Show quick filter step', async () => {
+      await page.waitForTimeout(750);
       await page.mouse.click(
         gridLocation.x + gridLocation.width * 0.8,
         gridLocation.y + gridLocation.height * 0.8
       );
+      await page.waitForTimeout(750);
       await page.keyboard.down('Control');
       await page.keyboard.press('F');
       await page.keyboard.up('Control');
