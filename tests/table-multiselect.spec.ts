@@ -109,7 +109,10 @@ function runMultiSelectFilter(
 
     // activate the quick filter to get that text as well
     await test.step('Show quick filter step', async () => {
-      await page.mouse.click(gridLocation.x + 805, gridLocation.y + 1);
+      await page.mouse.click(
+        gridLocation.x + gridLocation.width * 0.8,
+        gridLocation.y + gridLocation.height * 0.8
+      );
       await page.keyboard.down('Control');
       await page.keyboard.press('F');
       await page.keyboard.up('Control');
