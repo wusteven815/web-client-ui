@@ -87,11 +87,3 @@ jobs:
           npm run test:unit -- --cacheDirectory $PWD/.jest-cache
           npm run test:lint -- --lastCommit --cacheDirectory $PWD/.jest-cache
           npm run test:golden-layout
-
-      - name: Codecov report
-        uses: codecov/codecov-action@v4
-        with:
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage
-          flags: unit
