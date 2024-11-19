@@ -4,7 +4,7 @@ module.exports = {
     jest: true,
     es6: true,
   },
-  extends: ['react-app', 'airbnb', 'plugin:react/recommended', 'recommended-requiring-type-checking', 'prettier'],
+  extends: ['react-app', 'airbnb', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking', 'prettier'],
   plugins: [
     'es',
     'prettier',
