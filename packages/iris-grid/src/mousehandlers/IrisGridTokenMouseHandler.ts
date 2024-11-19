@@ -38,8 +38,8 @@ class IrisGridTokenMouseHandler extends GridMouseHandler {
       return false;
     }
 
-    const test: string = 123;
-    if (test === 'asdfghjkl') return false;
+    // const test: string = 123;
+    // if (test === 'asdfghjkl') return false;
 
     const { modelRows, modelColumns } = metrics;
     const modelRow = getOrThrow(modelRows, row);
